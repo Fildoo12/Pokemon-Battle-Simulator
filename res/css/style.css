@@ -1,0 +1,741 @@
+body{
+    font-family: 'Nunito', sans-serif;
+    user-select: none;
+}
+#pokemon {
+    width: 100%;
+    height: 100%;
+}
+#wrapper{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+#wrapper a{
+    padding: 30px 0 0 0;
+    display: block;
+    width: 300px;
+    height: 100px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    font-size: 40px;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  #wrapper a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  #wrapper a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all .35s;
+  }
+  
+  #wrapper a:hover{
+    color: #fff;
+  }
+  
+  #wrapper a:hover:after{
+    width: 100%;
+  }
+#battle {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  position: absolute;
+  left: 45%;
+  top: 70%;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#battle:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  #battle {
+    padding: 0 2.6rem;
+  }
+}
+#battle {
+    display: none;
+    padding: 1rem;
+}
+#background{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#choose{
+    display: none;
+}
+#pfpOne{
+    display: none;
+    width: 300px;
+    height: 300px;
+}
+#pfpTwo{
+    display: none;
+    width: 300px;
+    height: 300px;
+}
+#pfpThree{
+    display: none;
+    width: 300px;
+    height: 300px;
+}
+#koral{
+  display: none;
+  width: 300px;
+  height: 300px;
+}
+#gender {
+  position: absolute;
+  top: 10%;
+  background: linear-gradient(to bottom right, #0d00c5, #3170e6);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+}
+
+#gender:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(44, 68, 175, 0.5), .125rem .125rem 1rem rgba(43, 163, 243, 0.5);
+}
+
+#gender:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(44, 68, 175, 0.5), .125rem .125rem 1rem rgba(43, 163, 243, 0.5);
+}
+#genderg {
+  position: absolute;
+  top: 15%;
+  background: linear-gradient(to bottom right, #6a13ce, #e100ff);
+  border: 0;
+  border-radius: 12px;
+  color: #FFFFFF;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+}
+
+#genderg:not([disabled]):focus {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 28, 255, 0.5), .125rem .125rem 1rem rgba(211, 95, 205, 0.5);
+}
+
+#genderg:not([disabled]):hover {
+  box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(255, 28, 255, 0.5), .125rem .125rem 1rem rgba(211, 95, 205, 0.5);
+}
+
+#genders {
+    display: none;
+}
+#enemy {
+  position: absolute;
+  top: 15%;
+  left: 70%;
+    background: linear-gradient(to bottom right, #fc0000, #e66b85);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+  }
+  
+  #enemy:not([disabled]):focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(209, 45, 146, 0.5), .125rem .125rem 1rem rgba(236, 108, 226, 0.5);
+  }
+  
+  #enemy:not([disabled]):hover {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(209, 45, 146, 0.5), .125rem .125rem 1rem rgba(236, 108, 226, 0.5);
+  }
+  
+  #playerOne{
+    display: none;
+    position: absolute;
+    top: 20%;
+    border: black solid 3px;
+    background-color: rgb(177, 177, 177);
+    padding-bottom: 10em;
+  }
+  #playerTwo{
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 70%;
+    border: black solid 3px;
+    background-color: rgb(177, 177, 177);
+    padding-bottom: 10em;
+  }
+  #pokemonSelector{
+    position: absolute;
+    border: black solid 3px;
+    padding: 1em;
+    width: 93%;
+    height: 10%;
+    top: 82.5%;
+    left: 0%;
+  }
+  #pokemonSelectoro{
+    position: absolute;
+    border: black solid 3px;
+    padding: 1em;
+    width: 93%;
+    height: 10%;
+    top: 82.5%;
+    left: 0%;
+  }
+  #clear{
+    display: none;
+    position: absolute;
+    top: 95%;
+    padding: 1em;
+  }
+  #back{
+    display: none;
+    position: absolute;
+    top: 97%;
+    padding: 1em;
+  }
+  #menu{
+    display: none;
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+  }
+
+#secret {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: absolute;
+  top: 1%;
+  left: 95%;
+  display: none;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#secret:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#secret:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#credit{
+  position: absolute;
+  top: 95%;
+  left: 80%;
+}
+#pokemonSelectorText{
+  position: absolute;
+  top: 79%;
+  left: 2%;
+  text-decoration: underline;
+}
+#pokemonSelectorTexto{
+  position: absolute;
+  top: 79%;
+  left: 2%;
+  text-decoration: underline;
+}
+#pokemonSelectorBoy{
+  position: absolute;
+  bottom: 0.5%;
+  width: 80%;
+  display: none;
+}#pokemonSelectorGirl{
+  position: absolute;
+  bottom: 5%;
+  width: 80%;
+  display: none;
+}#pokemonSelectorKoral{
+  position: absolute;
+  bottom: 5%;
+  width: 80%;
+  display: none;
+}#pokemonSelectorRaketak{
+  position: absolute;
+  bottom: 5%;
+  width: 80%;
+  display: none;
+}
+#pokemonSelectorGirl0,img{
+  width: 80px;
+}
+/*HODNY POKEMONI*/
+#charizard{
+  display: none;
+}
+#blastoise{
+  display: none;
+}
+#venusaur{
+  display: none;
+}
+#raichu{
+  display: none;
+}
+#vaporeon{
+  display: none;
+}
+#umbreon{
+  display: none;
+}
+#flareon{
+  display: none;
+}
+#jolteon{
+  display: none;
+}
+
+/*ZLY POKEMONI*/
+#gengar{
+  display: none;
+}
+#dugtrio{
+  display: none;
+}
+#gyarados{
+  display: none;
+}
+#snorlax{
+  display: none;
+}
+#alakazam{
+  display: none;
+}
+#shuckle{
+  display: none;
+}
+#politoed{
+  display: none;
+}
+#crobat{
+  display: none;
+}
+
+#pokemonA{
+  position: absolute;
+  left: 130%;
+  bottom: -180%;
+}
+#pokemonB{
+  position: absolute;
+  left: 130%;
+  bottom: -180%;
+}
+#pokemonC{
+  position: absolute;
+  right: 130%;
+  bottom: 130%;
+}
+#pokemonD{
+  position: absolute;
+  right: 130%;
+  bottom: 130%;
+}
+
+.pokemoni,img{
+  width: 200px;
+}
+
+#attackOne{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+
+#attackOne a{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#FFA12B;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#attackOne a:active{
+  top:10px;
+  background-color:#F78900;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+#attackOne:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#attackTwo{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+
+#attackTwo a{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#0dff4a;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #5fa015;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #5fa015;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #5fa015;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#attackTwo a:active{
+  top:10px;
+  background-color:#0dff4a;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #5fa015;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #5fa015;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #5fa015;
+}
+
+#attackTwo:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#attackThree{
+  position:relative;
+  display:inline-block;
+  margin:20px;
+}
+
+#attackThree a{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#fffb01;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #d6e73f;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #d6e73f;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #d6e73f;
+  
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#attackThree a:active{
+  top:10px;
+  background-color:#fffb01;
+  
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #d6e73f;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #d6e73f;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #d6e73f;
+}
+
+#attackThree:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#attacks{
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+}
+#demo{
+  position: absolute;
+}
+#victory{
+  position: absolute;
+  top: 0%;
+  display: none;
+  width: 100%;
+  height: 110%;
+}
+#defeat{
+  position: absolute;
+  top: 0%;
+  display: none;
+  width: 100%;
+  height: 110%;
+}
+
+#restart {
+  position: absolute;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  font-size: 200px;
+  display: none;
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-weight: 600;
+  line-height: normal;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+#restart:disabled {
+  pointer-events: none;
+}
+
+#restart:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#restart:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+#ultimateButton {
+  display: none;
+  position: absolute;
+  left: 80%;
+  bottom: 10%;
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#ultimateButton:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  #ultimateButton {
+    padding: 10px 30px;
+  }
+}
+
+#playerOneStats{
+  display: none;
+  position: absolute;
+  bottom: 36%;
+  left: 1%;
+  font-size: 30px;
+}
+#playerTwoStats{
+  display: none;
+  position: absolute;
+  bottom: 36%;
+  left: 71%;
+  font-size: 30px;
+}
+#playerName{
+  font-size: 30px;
+  font-weight: bold;
+} 
+#enemyName{
+  font-size: 30px;
+  font-weight: bold;
+}

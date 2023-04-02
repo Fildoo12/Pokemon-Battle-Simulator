@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Battle Simulator</title>
+    <link rel="icon" type="image/x-icon" href="./res/img/pokeball.png">
+    <link rel="stylesheet" href="./res/css/style.css">
+</head>
+<body>
+    <img src="./res/img/pokemon.png" alt="" id="pokemon">
+
+    <div id="wrapper">
+        <a href="#" onclick="Scene()"><span>PLAY</span></a>
+    </div>
+
+    <h1 id="choose">Zvol si svoje a protivníka pokémony</h1>
+
+<div id="genders">
+    <button id="gender" onclick="Boy()">Boy</button>
+    <button id="genderg" onclick="Girl()">Girl</button>
+    <button id="enemy" onclick="Enemy()">Reveal Enemy</button>
+</div>
+
+    <div id="playerOne">
+        <p id="playerName"></p>
+        <img id="pfpOne" src="./res/img/playerOnePfp" alt="" srcset="">
+        <img id="pfpTwo"src="./res/img/playerOnePfpGirl" alt="" srcset="">
+        
+        <p id="pokemonSelectorText">Vyber si svého pokémona</p>
+        <div id="pokemonSelector">
+        <div id="pokemonSelectorBoy">
+            <img src="./res/img/charizardsmall.png" onclick="Char()" alt="" srcset="">
+            <img src="./res/img/blastoisesmall.png" onclick="Blas()" alt="" srcset="">
+            <img src="./res/img/raichusmall.png" onclick="Raich()" alt="" srcset="">
+            <img src="./res/img/venusaursmall.png" onclick="Venu()" alt="" srcset="">
+        </div>
+
+        <div id="pokemonA" class="pokemoni">
+            <img id="charizard" src="./res/img/charizard.png" alt="" srcset="">
+            <img id="blastoise" src="./res/img/blastoise.png" alt="" srcset="">
+            <img id="raichu" src="./res/img/raichu.png" alt="" srcset="">
+            <img id="venusaur" src="./res/img/venusaur.png" alt="" srcset="">
+        </div>
+
+        <div id="pokemonSelectorGirl">
+            <img src="./res/img/flareonsmall.png" onclick="Flar()" alt="" srcset="">
+            <img src="./res/img/vaporeonsmall.png" onclick="Vapo()" alt="" srcset="">
+            <img src="./res/img/jolteonsmall.png" onclick="Jolt()" alt="" srcset="">
+            <img src="./res/img/umbreonsmall.png" onclick="Umbr()" alt="" srcset="">
+        </div>
+        <div id="pokemonB" class="pokemoni">
+            <img id="vaporeon" src="./res/img/vaporeon.png" alt="" srcset="">
+            <img id="flareon" src="./res/img/flareon.png" alt="" srcset="">
+            <img id="jolteon" src="./res/img/jolteon.png" alt="" srcset="">
+            <img id="umbreon" src="./res/img/umbreon.png" alt="" srcset="">
+            </div>
+
+    </div>
+    </div>
+    
+    <div id="playerTwo">
+        <p id="enemyName"></p>
+        <img id="pfpThree"src="./res/img/playerTwoPfp.png" alt="" srcset="">
+        <img id="koral"src="./res/img/koral.png" alt="" srcset="">
+        <p id="pokemonSelectorTexto">Vyber nepříteli pokémona</p>
+        <div id="pokemonSelectoro">
+        <div id="pokemonSelectorRaketak">
+            <img src="./res/img/politoedsmall.png" onclick="Poli()" alt="" srcset="">
+            <img src="./res/img/crobatsmall.png" onclick="Crob()" alt="" srcset="">
+            <img src="./res/img/gengarsmall.png" onclick="Geng()" alt="" srcset="">
+            <img src="./res/img/alakazamsmall.png" onclick="Alak()" alt="" srcset="">
+        </div>
+
+            <div id="pokemonC" class="pokemoni">
+            <img id="politoed" src="./res/img/politoed.png" alt="" srcset="">
+            <img id="crobat" src="./res/img/crobat.png" alt="" srcset="">
+            <img id="gengar" src="./res/img/gengar.png" alt="" srcset="">
+            <img id="alakazam" src="./res/img/alakazam.png" alt="" srcset="">
+            </div>
+
+
+        <div id="pokemonSelectorKoral">
+            <img src="./res/img/shucklesmall.png" onclick="Shuc()" alt="" srcset="">
+            <img src="./res/img/dugtriosmall.png" onclick="Dugt()" alt="" srcset="">
+            <img src="./res/img/snorlaxsmall.png" onclick="Snor()" alt="" srcset="">
+            <img src="./res/img/gyaradossmall.png" onclick="Gyar()" alt="" srcset="">
+        </div>
+
+            <div id="pokemonD" class="pokemoni">
+            <img id="shuckle" src="./res/img/shuckle.png" alt="" srcset="">
+            <img id="dugtrio" src="./res/img/dugtrio.png" alt="" srcset="">
+            <img id="snorlax" src="./res/img/snorlax.png" alt="" srcset="">
+            <img id="gyarados" src="./res/img/gyarados.png" alt="" srcset="">
+            </div>
+    
+
+    </div>
+    </div>
+
+    <button id="battle" onclick="Battle()">BATTLE</button>
+
+    <img id="background"src="./res/img/background.png" alt="" srcset="">
+
+    <button id="secret" onclick="Secret()">Secret</button>
+    <button id="clear" onclick="Clear()">CLEAR</button>
+    <button id="back" onclick="Back()">Back</button>
+
+    <img id="menu" src="./res/img/menu.jpg" alt="">
+
+    
+
+    <div id="attacks">
+        <div id="attackOne">
+          <a href="#" onclick="Basic()">Basic Attack</a>
+        </div>
+        <div id="attackTwo">
+          <a href="#" onclick="Super()">Super Attack</a>
+        </div>
+        <div id="attackThree">
+          <a href="#" onclick="Ultimate()">Ultimate Attack</a>
+        </div>
+    </div>
+    <div id="playerOneStats">
+<p id="playerOneName"></p>
+<p id="playerOneHp"></p>
+</div>
+
+<div id="playerTwoStats">
+<p id="playerTwoName"></p>
+<p id="playerTwoHp"></p>
+</div>
+
+<button id="ultimateButton" onclick="Ultimatka()">KLIKEJ PRO NABITI ULTIMATKY</button>
+
+<img id="victory" src="./res/img/victory.jpg" alt="" srcset="">
+<img id="defeat" src="./res/img/defeat.jpg" alt="" srcset="">
+<button id="restart" onclick="Restart()">RESTART</button>
+<p id="credit">Za grafiku děkuji Tadeáši Mejzlíkovi</p>
+    <script src="./res/js/main.js"></script>
+</body>
+</html>

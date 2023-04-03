@@ -64,7 +64,6 @@ Scene = () => {
 pokemon.style.display = "none";
 play.style.display = "none";
 credit.style.display = "none";
-battle.style.display = "flex";
 choose.style.display = "flex";
 genders.style.display = "flex";
 clear.style.display = "flex";
@@ -132,6 +131,7 @@ Enemy = () => {
     playerTwoPfp.style.display = "flex";
     koral.style.display = "none";
     playerTwo.style.display = "flex";
+    battle.style.display = "flex";
     pokemonSelectorRaketak.style.display = "flex";
     pokemonSelectorKoral.style.display = "none";
     enemyName.innerHTML = `Jméno: ${enemyPlayer}`;
